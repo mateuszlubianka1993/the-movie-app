@@ -1,12 +1,35 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {getNowPlaying} from '../actions';
+import Movie from './Movie';
 
 class NowPlaying extends React.Component {
 
+    componentDidMount() {
+        this.props.getNowPlaying();
+    }
+
     render() {
+        const { nowPlaying } = this.props;
+        const renderMovies = nowPlaying.map((movie) => <Movie movie={movie} key={movie.id} />)
         return(
-            <div>NowPlaying</div>
+            <div className="ui container">
+                <h2 className="ui center aligned icon header">
+                    <i className="circular video icon"></i>
+                        Now Playing Movies
+                </h2>
+                <div className="movies-list">
+                    {renderMovies}
+                </div>
+            </div>
         );
     };
 }
 
-export default NowPlaying;
+const mapStateToProps = (state) => {
+    return {
+      nowPlaying: state.nowPlaying,
+    };
+  };
+
+export default connect(mapStateToProps, {getNowPlaying}) (NowPlaying);

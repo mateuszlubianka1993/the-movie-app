@@ -23,7 +23,7 @@ const key = '3e47509c5e108f3c61f81a43fdd0bb7c';
     };
 
     export const getNowPlaying = () => async dispatch => {
-        const response = await tmdApi.get('/tv/now_playing', {
+        const response = await tmdApi.get('/movie/now_playing', {
             params: { api_key: key },
             
         });
