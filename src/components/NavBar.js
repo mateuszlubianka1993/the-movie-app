@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const NavBar = () => {
     return(
-        <div className="ui inverted segment">
+        <div className="ui inverted vertical segment">
             <div className="ui inverted secondary pointing menu">
                 <Link to="/" className="active item">
                     Home
