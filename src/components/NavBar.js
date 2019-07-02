@@ -1,12 +1,13 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const NavBar = () => {
     return(
         <div className="ui inverted segment">
             <div className="ui inverted secondary pointing menu">
-                <a className="active item">
+                <Link to="/" className="active item">
                     Home
-                </a>
+                </Link>
                 <a className="item">
                     Top Movies
                 </a>
