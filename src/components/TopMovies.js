@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {getTopMovies} from '../actions';
+import Movie from './Movie';
 
 class TopMovies extends React.Component {
 
@@ -9,7 +10,8 @@ class TopMovies extends React.Component {
     }
 
     render() {
-        const { TopMovies } = this.props;
+        const { topMovies } = this.props;
+        const renderMovies = topMovies.map((movie) => <Movie movie={movie} key={movie.id} />)
         return(
             <div className="ui container">
                 <h2 className="ui center aligned icon header">
@@ -17,7 +19,7 @@ class TopMovies extends React.Component {
                         Top Rated Movies
                 </h2>
                 <div className="movies-list">
-
+                    {renderMovies}
                 </div>
             </div>
         );
@@ -26,7 +28,7 @@ class TopMovies extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-      TopMovies: state.TopMovies,
+      topMovies: state.topMovies,
     };
   };
 
