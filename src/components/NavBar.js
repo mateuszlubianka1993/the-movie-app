@@ -8,18 +8,18 @@ const NavBar = () => {
                 <Link to="/" className="active item">
                     Home
                 </Link>
-                <a className="item">
+                <Link to="/top-movies" className="item">
                     Top Movies
-                </a>
-                <a className="item">
+                </Link>
+                <Link to="/top-shows" className="item">
                     Top TV Shows
-                </a>
-                <a className="item">
+                </Link>
+                <Link to="/now-playing" className="item">
                     Now Playing
-                </a>
-                <a className="item">
+                </Link>
+                <Link to="/search" className="item">
                     Search
-                </a>
+                </Link>
             </div>
         </div>
     );
