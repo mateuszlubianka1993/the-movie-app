@@ -1,8 +1,15 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {getTopMovies} from '../actions';
 
 class TopMovies extends React.Component {
 
+    componentDidMount() {
+        this.props.getTopMovies();
+    }
+
     render() {
+        const { TopMovies } = this.props;
         return(
             <div className="ui container">
                 <h2 className="ui center aligned icon header">
@@ -17,4 +24,10 @@ class TopMovies extends React.Component {
     };
 }
 
-export default TopMovies;
+const mapStateToProps = (state) => {
+    return {
+      TopMovies: state.TopMovies,
+    };
+  };
+
+export default connect(mapStateToProps, {getTopMovies}) (TopMovies);
