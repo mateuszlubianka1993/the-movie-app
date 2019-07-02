@@ -15,7 +15,10 @@ const NavBar = () => {
                     Top TV Shows
                 </a>
                 <a className="item">
-                    Top TV Shows
+                    Now Playing
+                </a>
+                <a className="item">
+                    Search
                 </a>
             </div>
         </div>
