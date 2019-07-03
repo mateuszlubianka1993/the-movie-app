@@ -49,3 +49,12 @@ const key = '3e47509c5e108f3c61f81a43fdd0bb7c';
         }
     };
 
+    export const getSearched = (e, iValue) => async dispatch  => {
+        e.preventDefault();
+        
+        const response = await tmdApi.get(`/search/multi${iValue}`);
+        dispatch({
+            type: 'GET_SEARCHED', 
+            payload: response.data 
+        })
+    }
