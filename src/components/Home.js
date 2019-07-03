@@ -4,7 +4,15 @@ class Home extends React.Component {
 
     render() {
         return(
-            <div>Home</div>
+            <div className="ui container">
+                <h2 className="ui center aligned icon header">
+                    <i className="circular users icon"></i>
+                        Popular People
+                </h2>
+                <div className="people-list">
+                    
+                </div>
+            </div>
         );
     };
 }

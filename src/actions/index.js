@@ -32,3 +32,13 @@ const key = '3e47509c5e108f3c61f81a43fdd0bb7c';
         dispatch({type: 'GET_NOW_PLAYING', payload: result })
     };
 
+    export const getPopularPeople = () => async dispatch => {
+        const response = await tmdApi.get('/person/popular', {
+            params: { api_key: key },
+            
+        });
+        const result = response.data.results;
+
+        dispatch({type: 'GET_POPULAR_PEOPLE', payload: result })
+    };
+
