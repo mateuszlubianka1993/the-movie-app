@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {getPopularPeople} from '../actions';
 import Person from './Person';
+import '../styles/display-items.css';
 
 class Home extends React.Component {
 
@@ -15,12 +16,12 @@ class Home extends React.Component {
         const renderPeople = popularPeople.map((person) => <Person person={person} key={person.id} />)
 
         return(
-            <div className="ui container">
+            <div className="ui container display-container">
                 <h2 className="ui center aligned icon header">
                     <i className="circular users icon"></i>
                         Popular People
                 </h2>
-                <div className="people-list">
+                <div className="people-list item-list">
                     {renderPeople}
                 </div>
             </div>

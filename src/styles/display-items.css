@@ -1,0 +1,11 @@
+.display-container {
+    padding: 35px 10px;
+}
+.item-list {
+    padding: 25px 10px;
+    background-color: #114F26;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: baseline;
+}

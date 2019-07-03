@@ -1,10 +1,11 @@
 import React from 'react';
+import '../styles/Show.css';
 
 class Show extends React.Component {
     render() {
         const {show} = this.props;
         return(
-            <div className="ui card">
+            <div className="ui card show-box">
                 <div className="image">
                     <img src={`https://image.tmdb.org/t/p/w200/${show.poster_path}`} alt="poster" />
                 </div>
