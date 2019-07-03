@@ -42,3 +42,10 @@ const key = '3e47509c5e108f3c61f81a43fdd0bb7c';
         dispatch({type: 'GET_POPULAR_PEOPLE', payload: result })
     };
 
+    export const getInputValue = (data) => {
+        return {
+            type: 'GET_INPUT_VALUE',
+            payload: data
+        }
+    };
+
