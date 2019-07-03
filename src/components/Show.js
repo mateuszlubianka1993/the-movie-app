@@ -6,7 +6,7 @@ class Show extends React.Component {
         return(
             <div className="ui card">
                 <div className="image">
-                    <img src={`https://image.tmdb.org/t/p/w600_and_h900_bestv2/${show.poster_path}`} alt="poster" />
+                    <img src={`https://image.tmdb.org/t/p/w200/${show.poster_path}`} alt="poster" />
                 </div>
                 <div className="content">
                     <h5 className="header">{show.title}</h5>

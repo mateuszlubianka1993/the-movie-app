@@ -4,7 +4,12 @@ class Search extends React.Component {
 
     render() {
         return(
-            <div>Search</div>
+            <div className="ui container">
+                <form className="ui action big fluid input">
+                    <input type="text" placeholder="Search movie, TV show or person..."/>
+                    <button className="ui positive button">Search</button>
+                </form>
+            </div>
         );
     };
 }

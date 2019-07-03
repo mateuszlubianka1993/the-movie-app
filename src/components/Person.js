@@ -6,8 +6,11 @@ class Show extends React.Component {
         const knownForRender = person.known_for.map(x=>{
             return(
                 <div className="item">
-                        <img src={`https://image.tmdb.org/t/p/w45/${x.poster_path}`} alt="poster"/>
-                        <div className="header">{x.title}</div>
+                        
+                        <div className="header">
+                            <img src={`https://image.tmdb.org/t/p/w45/${x.poster_path}`} alt="poster"/>
+                            {x.title}
+                        </div>
                 </div>
             );
         })
@@ -19,7 +22,7 @@ class Show extends React.Component {
                 <div className="content">
                     <h5 className="header">{person.name}</h5>
                     <div className="description">
-                        <h5>Known for:</h5>
+                        <h4>Known for:</h4>
                         <div className="">
                             {knownForRender}
                         </div>
