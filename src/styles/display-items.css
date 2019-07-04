@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: baseline;
+    min-height: 50vh;
 }
 .green-color {
     color: #114F26;

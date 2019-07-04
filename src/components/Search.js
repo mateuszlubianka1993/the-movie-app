@@ -4,6 +4,8 @@ import {getInputValue, getSearched} from '../actions';
 import Movie from './Movie';
 import Show from './Show';
 import Person from './Person';
+import '../styles/display-items.css';
+import '../styles/Search.css';
 
 class Search extends React.Component {
 
@@ -21,17 +23,17 @@ class Search extends React.Component {
                     } else return null;
                 });
             } else {
-                return <h2>Search your favourite movie, TV show or famous actors...</h2>;
+                return <h2 className="search-header">Search your favourite movie, TV show or famous actors...</h2>;
             };
         };
 
         return(
-            <div className="ui container">
-                <form onSubmit={(e)=>this.props.getSearched(e, inputValue)} className="ui action big fluid input">
+            <div className="ui container display-container">
+                <form onSubmit={(e)=>this.props.getSearched(e, inputValue)} className="ui action big fluid input search-form">
                     <input onChange={(e)=>this.props.getInputValue(e.target.value)} required type="text" placeholder="Movie, TV or person..."/>
                     <button className="ui positive button">Search</button>
                 </form>
-                <div className="search-list">
+                <div className="search-list item-list">
                     {renderResults()}
                 </div>
             </div>
