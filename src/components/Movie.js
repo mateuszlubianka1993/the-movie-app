@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/display-items.css';
 
 class Movie extends React.Component {
     render() {
@@ -19,11 +20,11 @@ class Movie extends React.Component {
                 </div>
                 <div className="extra content">
                     <div>
-                        <i className="thumbs up icon"></i>
-                            {movie.vote_average}/10
+                        <i className="thumbs up icon green-color"></i>
+                            <span className="gold-color"> {movie.vote_average}/10</span>
                     </div>
                     <div>
-                            Votes: {movie.vote_count}
+                            <span className="green-color">Votes:</span><span className="gold-color"> {movie.vote_count}</span>
                     </div>
                 </div>
             </div>
