@@ -2,6 +2,11 @@ import React from 'react';
 import '../styles/display-items.css';
 
 class Movie extends React.Component {
+    state = {active: false};
+    seeMore = () => {
+        this.setState({active: !this.state.active});
+    };
+
     render() {
         const {movie} = this.props;
         return(
@@ -15,7 +20,10 @@ class Movie extends React.Component {
                         <span className="date">{movie.release_date}</span>
                     </div>
                     <div className="description">
-                        {movie.overview}
+                        <div className={this.state.active ? "read-more" : "read-less"}>
+                            {movie.overview}
+                        </div>
+                        <button className="fluid ui button" onClick={this.seeMore}>{this.state.active ? 'See less' : 'See more'}</button>
                     </div>
                 </div>
                 <div className="extra content">

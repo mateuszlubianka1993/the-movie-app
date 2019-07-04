@@ -16,3 +16,11 @@
 .gold-color {
     color: #F38815;
 }
+.read-more {
+    overflow: visible;
+    height: auto;
+}
+.read-less {
+    overflow: hidden;
+    height: 100px;
+}
