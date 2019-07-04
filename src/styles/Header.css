@@ -1,11 +1,15 @@
 .header-container {
     padding: 25px;
     background-color: #D8D8D8;
-    /* background-color: #114F26; */
 }
 .header-txt {
     font-size: 56px;
     text-align: center;
     color: #114F26;
-    /* color: #D8d8d8; */
+}
+/* RWD */
+@media (max-width: 480px) {
+    .header-txt {
+        font-size: 40px;
+    }
 }
