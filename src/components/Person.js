@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Person.css';
 
 class Show extends React.Component {
     render() {
@@ -6,11 +7,10 @@ class Show extends React.Component {
         const knownForRender = person.known_for.map(x=>{
             return(
                 <div className="item">
-                        
-                        <div className="header">
-                            <img src={`https://image.tmdb.org/t/p/w45/${x.poster_path}`} alt="poster"/>
-                            {x.title}
-                        </div>
+                    <div className="header known-for-header">
+                        <img src={`https://image.tmdb.org/t/p/w45/${x.poster_path}`} className="known-for-img" alt="poster"/>
+                            {(x.title)?(x.title):'Title not found.'}
+                    </div>
                 </div>
             );
         })

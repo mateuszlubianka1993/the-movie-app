@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import {getTopShows} from '../actions';
 import Show from './Show';
 import '../styles/display-items.css'
-import '../styles/TopShows.css';
 
 class TopShows extends React.Component {
 

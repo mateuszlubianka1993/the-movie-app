@@ -1,0 +1,9 @@
+.known-for-img {
+    margin-right: 10px;
+}
+.known-for-header {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    border-bottom: 2px solid #F38815;
+}
