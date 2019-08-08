@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 > Hi everyone! This is my The Movie App. 
 
 ## Live
+https://mateuszlubianka1993.github.io/the-movie-app/
 https://the-movie-app-react.herokuapp.com/
 
 ## Technologies:
